@@ -38,10 +38,10 @@
         },
         "lambda-decorators": {
             "hashes": [
-                "sha256:49096c2ea756980318eb429063fc037c81d5d7fc607dc1bc7d1d37179c999521",
-                "sha256:480fe180c57440b168abdd7730eab5735e1f556be8aabfdb320b92b21110d16d"
+                "sha256:28b27af621f4756366567ffb8eceeabc29288acafdff0d4250518eecdcd45e97",
+                "sha256:5b63c020eeb6946e4d0b85c03ac91b8483271cfb27ad7abc1b94f816e04299c7"
             ],
-            "version": "==0.1b2"
+            "version": "==0.1b3"
         }
     },
     "develop": {}
