@@ -14,7 +14,7 @@ provider:
 #    - Effect: Allow
 #      Action: ssm:GetParameter
 #      Resource:
-#        Fn::Sub: arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/${self:custom.service.name}/${self:custom.stage}/*
+#        Fn::Sub: arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/serverless-python-template/${self:custom.stage}/*
 #    - Effect: Allow
 #      Action:  kms:Decrypt
 #      Resource: ${self:custom.service.awsKmsKeyArn}
@@ -31,7 +31,6 @@ package:
 
 custom:
   stage: ${opt:stage, self:provider.stage} # shortcut for current stage
-  #service: ${file(serverless.yml):service} # workaround for ${self:service}
 
 plugins:
   - serverless-python-requirements
