@@ -18,7 +18,7 @@ provider:
 #    - Effect: Allow
 #      Action: ssm:GetParameter
 #      Resource:
-#        Fn::Sub: arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/serverless-python-template/${self:custom.stage}/*
+#        Fn::Sub: arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/${self:custom.service}/${self:custom.stage}/*
 #    - Effect: Allow
 #      Action:  kms:Decrypt
 #      Resource: ${self:custom.service.awsKmsKeyArn}
