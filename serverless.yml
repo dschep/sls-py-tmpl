@@ -1,6 +1,10 @@
 service:
-  name: serverless-python-template
+  name: ${self:custom.service}
   # awsKmsKeyArn: ''
+  
+custom:
+  stage: ${opt:stage, self:provider.stage} # shortcut for current stage
+  service: ${file(serverless.yml):service} # workaround for ${self:service} not working
 
 provider:
   name: aws
@@ -28,9 +32,6 @@ package:
     - handler.py
   exclude:
     - '**/*'
-
-custom:
-  stage: ${opt:stage, self:provider.stage} # shortcut for current stage
 
 plugins:
   - serverless-python-requirements
