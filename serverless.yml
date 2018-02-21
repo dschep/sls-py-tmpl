@@ -1,10 +1,10 @@
-service: &service
-  name: hello
+service:
+  name: ${self:custom.service}
   # awsKmsKeyArn: ''
   
 custom:
   stage: ${opt:stage, self:provider.stage} # shortcut for current stage
-  service: *service # workaround for ${self:service} not working
+  service: ${file(serverless.yml):service} # workaround for ${self:service} not working
 
 provider:
   name: aws
@@ -18,7 +18,7 @@ provider:
 #    - Effect: Allow
 #      Action: ssm:GetParameter
 #      Resource:
-#        Fn::Sub: arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/${self:custom.service.name}/${self:custom.stage}/*
+#        Fn::Sub: arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/${self:custom.service}/${self:custom.stage}/*
 #    - Effect: Allow
 #      Action:  kms:Decrypt
 #      Resource: ${self:custom.service.awsKmsKeyArn}
