@@ -31,7 +31,7 @@ package:
 
 custom:
   stage: ${opt:stage, self:provider.stage} # shortcut for current stage
-  service: ${file(serverless.yml):service} # workaround for ${self:service}
+  #service: ${file(serverless.yml):service} # workaround for ${self:service}
 
 plugins:
   - serverless-python-requirements
