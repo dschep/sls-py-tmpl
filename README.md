@@ -12,8 +12,9 @@ Serverless:
  * ✨🍰✨ [pipenv](https://docs.pipenv.org)
 
 It also has a tweaked `serverless.yml` file featuring:
- * A better iam example - resources needed for using SSM Parameter store!
- * Add custom secion with useful workarounds sls var limitations
+ * custom variable syntax that allows using the default syntax AND `${AWS::AccountId}` CloudFormation-style variables
+ * A better IAM example - resources needed for using SSM Parameter store!
+ * Add custom section with useful workarounds sls var limitations
  * A few other minor tweaks
 
 ## Getting started
