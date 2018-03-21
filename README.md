@@ -41,7 +41,8 @@ Installing dependencies from Pipfile.lock (c44045)…
   🐍   ▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉ 1/1 — 00:00:00
 To activate this project's virtualenv, run the following:
  $ pipenv shell
-
+$ # install python plugin
+$ npm install
 $ # Test the sample lambda locally (sls is an included alias for serverless)
 $ pipenv run sls invoke local -f hello
 {
