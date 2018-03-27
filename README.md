@@ -22,7 +22,7 @@ It also has a tweaked `serverless.yml` file featuring:
 $ # if you don't have them installed, ensure you have serverless & pipenv
 $ npm i -g serverless ; pip install pipenv
 $ # Clone the template using the
-$ serverless install -u https://github.com/dschep/sls-py-tmpl -n project-name
+$ serverless create -u https://github.com/dschep/sls-py-tmpl -n project-name
 Serverless: Downloading and installing "sls-py-tmpl"...
 Serverless: Successfully installed "project-name" 
 $ cd project-name
