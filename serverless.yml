@@ -2,6 +2,8 @@ service: python-service
   
 custom:
   stage: ${opt:stage, self:provider.stage} # shortcut for current stage
+  pythonRequirements:
+    dockerizePip: non-linux
 
 provider:
   name: aws
